@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
-import { ShoppingCart } from 'lucide-react';
+import { AlertCircleIcon, ShoppingCart } from 'lucide-react';
 
 const ProductCard = ({ product }) => {
   const { addToCart, cartItems } = useContext(CartContext);
@@ -13,8 +13,8 @@ const ProductCard = ({ product }) => {
   const itemInCart = cartItems.find((item) => item.id === product.id);
 
   return (
-    <div className="w-full sm:w-1/2 lg:w-1/3 p-4 flex justify-center">
-      <div className="p-6 border border-neutral-700 rounded-xl shadow-md hover:shadow-blue-500/60 transition-shadow duration-300 max-w-sm text-center w-full flex flex-col h-full">
+    <div className="p-4 h-full">
+      <div className="p-6 border border-neutral-700 rounded-xl shadow-md hover:shadow-blue-500/60 transition-shadow duration-300 text-center w-full flex flex-col h-full">
         <img
           src={product.image}
           alt={product.name}

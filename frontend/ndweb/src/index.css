@@ -9,24 +9,24 @@
 
 }
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
   background: black;
-  border-radius: 10px;
+
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg,rgb(80, 117, 240), #E57905);
+  background: linear-gradient(135deg,rgb(80, 117, 240), #0523e5);
   border-radius: 10px;
   transition: background 0.3s ease-in-out;
 }
 
 /* Hover Effect */
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(255, 115, 0);
-}
+/* ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg,rgb(240, 171, 80), #0523e5);
+} */
 html {
   scroll-behavior: smooth;
   height: 100%;

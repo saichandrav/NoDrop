@@ -101,9 +101,9 @@ const Navbar = () => {
       <div className="container px-4 mx-auto relative lg:text-sm">
         <div className="flex justify-between items-center">
           <div className="flex items-center shrink-0">
-            <a href="/" aria-label="Home">
+            <Link to="/" aria-label="Home">
               <img className="h-auto w-20 mr-2" src={logo} alt="Logo" />
-            </a>
+            </Link>
           </div>
 
           {/* Search Bar */}

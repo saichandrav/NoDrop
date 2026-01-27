@@ -25,11 +25,11 @@ const Footer = () => {
         { href: "#", text: "Careers" },
     ];
     return (
-        <footer className="mt-16 border-t py-10 px-3.5 border-neutral-700 bg-neutral-600" id="footer">
+        <footer className="mt-16 border-t py-10 px-3.5 border-neutral-700 bg-neutral-800" id="footer">
             <div className="container mx-auto px-6 sm:px-6 lg:px-20 grid  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1">
                 {/* Resources */}
                 <div className="mt-2">
-                    <h3 className="text-md font-semibold mb-4">Resources</h3>
+                    <h3 className="text-md font-semibold mb-4 text-[#878787]">Resources</h3>
                     <ul className="space-y-2">
                         {resourcesLinks.map((link, index) => (
                             <li key={index}>
@@ -46,7 +46,7 @@ const Footer = () => {
 
                 {/* Platform */}
                 <div className="mt-2">
-                    <h3 className="text-md font-semibold mb-4">Platform</h3>
+                    <h3 className="text-md font-semibold mb-4 text-[#878787]">Platform</h3>
                     <ul className="space-y-2">
                         {platformLinks.map((link, index) => (
                             <li key={index}>
@@ -63,7 +63,7 @@ const Footer = () => {
 
                 {/* Community */}
                 <div className="mt-2">
-                    <h3 className="text-md font-semibold mb-4">Community</h3>
+                    <h3 className="text-md font-semibold mb-4 text-[#878787]">Community</h3>
                     <ul className="space-y-2">
                         {communityLinks.map((link, index) => (
                             <li key={index}>
@@ -80,7 +80,7 @@ const Footer = () => {
 
                 {/* Contact */}
                 <div className="mt-2">
-                    <h3 className="text-md font-semibold mb-4">Contact</h3>
+                    <h3 className="text-md font-semibold mb-4 text-[#878787]">Contact</h3>
                     <ul className="space-y-2 text-neutral-300">
                         <li>
                             <span className="block hover:text-white transition-colors">

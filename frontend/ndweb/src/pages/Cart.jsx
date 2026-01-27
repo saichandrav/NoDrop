@@ -109,7 +109,7 @@ const Cart = () => {
             >
               Continue Shopping
             </Link>
-            <button className="flex-1 py-3 px-6 bg-linear-to-r from-blue-500 to-blue-800 rounded-lg hover:shadow-lg transition text-center font-semibold">
+            <button className="cursor-pointer flex-1 py-3 px-6 bg-linear-to-r from-blue-500 to-blue-800 rounded-lg hover:shadow-lg transition text-center font-semibold">
               Proceed to Checkout
             </button>
           </div>

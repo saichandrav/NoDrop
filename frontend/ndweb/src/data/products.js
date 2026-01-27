@@ -1,6 +1,9 @@
 import bisleri from '../assets/image.avif';
 import tata from '../assets/tatawater.jpg';
 import aquamine from '../assets/aquamine.jpeg';
+import bisleri20l from '../assets/Bisleri20.jpeg';
+import bisleri10l from '../assets/Bisleri10.jpg';
+import bisleri5l from '../assets/Bisleri5.avif';
 
 export const brands = [
   { name: 'All', id: 'all' },
@@ -16,7 +19,7 @@ export const products = [
     name: 'Bisleri Pure Water 20L',
     brand: 'bisleri',
     price: 50,
-    image: bisleri,
+    image: bisleri20l,
     description: 'Pure, clean, and mineral-balanced water delivered fresh to your doorstep.',
   },
   {
@@ -24,7 +27,7 @@ export const products = [
     name: 'Bisleri Pure Water 10L',
     brand: 'bisleri',
     price: 30,
-    image: bisleri,
+    image: bisleri10l,
     description: 'Perfect for small families, same purity in every drop.',
   },
   {
@@ -32,7 +35,7 @@ export const products = [
     name: 'Bisleri Pure Water 5L',
     brand: 'bisleri',
     price: 15,
-    image: bisleri,
+    image: bisleri5l,
     description: 'Compact size for offices and small households.',
   },
 
