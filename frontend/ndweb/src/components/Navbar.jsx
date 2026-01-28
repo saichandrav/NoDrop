@@ -53,7 +53,7 @@ const Navbar = () => {
     <ul className={className}>
       {navItems.map((item) => (
         <li key={item.label} className="py-4 px-1 hover:text-blue-200">
-          <a href={item.href} onClick={onItemClick}>{item.label}</a>
+          <Link to={item.href} onClick={onItemClick}>{item.label}</Link>
         </li>
       ))}
     </ul>
