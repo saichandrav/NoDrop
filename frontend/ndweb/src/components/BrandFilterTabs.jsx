@@ -3,7 +3,7 @@ import { brands } from '../data/products';
 
 const BrandFilterTabs = ({ activeBrand, onBrandChange }) => {
   return (
-    <div className="w-full mb-12 px-4">
+    <div className="w-full mb-12 px-2">
       <h2 className="text-2xl font-semibold mb-6 text-center">Filter by Brand</h2>
       <div className="-mx-4 px-4 overflow-x-auto whitespace-nowrap">
         <div className="inline-flex gap-3 sm:gap-4 items-stretch">

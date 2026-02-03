@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import ProductCard from '../components/ProductCard';
 import BrandFilterTabs from '../components/BrandFilterTabs';
@@ -7,62 +7,66 @@ import { getProductsByBrand, brands } from '../data/products';
 const Products = () => {
   const { brand } = useParams();
   const navigate = useNavigate();
-  
-  // Determine active brand from URL or state
-  const [activeBrand, setActiveBrand] = useState(() => {
-    if (brand && brands.some((b) => b.id === brand)) {
-      return brand;
-    }
-    return 'all';
-  });
 
-  // Update URL when brand changes
+  // Single source of truth → URL
+  const activeBrand =
+    brand && brands.some((b) => b.id === brand) ? brand : 'all';
+
   useEffect(() => {
-    if (activeBrand === 'all') {
-      navigate('/products', { replace: true });
-    } else {
+    if (!brand && activeBrand !== 'all') {
       navigate(`/products/${activeBrand}`, { replace: true });
     }
-  }, [activeBrand, navigate]);
-
-  // Sync active brand with URL param
-  useEffect(() => {
-    if (brand) {
-      setActiveBrand(brand);
-    }
-  }, [brand]);
+  }, [brand, activeBrand, navigate]);
 
   const filteredProducts = getProductsByBrand(activeBrand);
 
   const handleBrandChange = (brandId) => {
-    setActiveBrand(brandId);
+    navigate(
+      brandId === 'all' ? '/products' : `/products/${brandId}`,
+      { replace: true }
+    );
   };
 
   return (
-    <div className="min-h-screen pt-20 px-4 sm:px-6 lg:px-6 pb-20">
+    <section className="min-h-screen pt-20 pb-24 px-4 sm:px-6 lg:px-10">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl sm:text-6xl font-bold text-center mb-4">
-          Our Water Products
-        </h1>
-        <p className="text-center text-neutral-400 mb-12">
-          Choose from our premium water brands
-        </p>
+        
+        {/* Header */}
+        <header className="text-center mb-12">
+          <h1 className="text-3xl sm:text-5xl  font-bold mb-3">
+            Our Water Products
+          </h1>
+          <p className="text-neutral-400">
+            Choose from our premium water brands
+          </p>
+        </header>
 
-        <BrandFilterTabs activeBrand={activeBrand} onBrandChange={handleBrandChange} />
+        {/* Brand Filter */}
+        <BrandFilterTabs
+          activeBrand={activeBrand}
+          onBrandChange={handleBrandChange}
+        />
 
+        {/* Products Grid */}
         {filteredProducts.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 items-stretch">
+          <div className="
+            grid gap-5 sm:gap-6 mt-10
+            grid-cols-1
+            sm:grid-cols-2
+            lg:grid-cols-3
+            xl:grid-cols-4
+          ">
             {filteredProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
         ) : (
-          <div className="text-center text-neutral-400">
+          <div className="text-center text-neutral-400 mt-16">
             <p>No products found for this brand.</p>
           </div>
         )}
       </div>
-    </div>
+    </section>
   );
 };
 

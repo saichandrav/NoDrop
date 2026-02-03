@@ -42,7 +42,7 @@ const Pricing = () => {
             <h2 className="text-3xl sm:text-5xl lg:text-6xl text-center my-8 tracking-wide bg-linear-to-r from-orange-500 to-orange-800 text-transparent bg-clip-text" id="subscription">
                 SUBSCRIPTION
             </h2>
-            <div className="flex flex-wrap">
+            <div className="flex flex-wrap justify-center mx-auto px-4 sm:px-6 lg:px-5">
                 {pricingOptions.map((option, index) => (
                     <div key={index} className="w-full sm:w-1/2 lg:w-1/3 p-2">
                         <div className="p-10 border border-neutral-700 rounded-xl hover:shadow-[0_10px_30px_rgba(255,165,0,0.35)] transition-shadow duration-200">

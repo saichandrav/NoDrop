@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Homehero = () => {
   return (
     <div className="flex flex-col items-center mt-5 sm:mt-10 lg:mt-30 ">
@@ -21,12 +23,12 @@ const Homehero = () => {
       </p>
 
       <div className="flex flex-col sm:flex-row justify-center gap-4 my-8 sm:my-10">
-        <a
-          href="#products"
+        <Link
+          to="/products"
           className="bg-linear-to-r from-blue-500 to-blue-800 py-3 px-4  rounded-md text-center text-white"
         >
           Order Now
-        </a>
+        </Link>
         <a
           href="#subscription"
           className="py-3 px-6 rounded-md border text-center"

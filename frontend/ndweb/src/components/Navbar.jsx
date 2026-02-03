@@ -41,7 +41,7 @@ const Navbar = () => {
 
         ticking.current = false;
       });
-    };
+    }; 
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
@@ -62,7 +62,7 @@ const Navbar = () => {
   const renderAuthActions = (isMobile = false) => (
     <div className={isMobile ? 'flex flex-col gap-3 mt-6' : 'flex items-center space-x-10 '}>
       <Link
-        to="/login"
+        to="/Signin"
         className={
           isMobile
             ? 'py-3 px-4 border rounded-md hover:bg-white text-center'
@@ -73,7 +73,7 @@ const Navbar = () => {
       </Link>
       {isMobile && (
         <Link
-          to="/signup"
+          to="/Signin"
           className="py-3 px-4 rounded-md bg-linear-to-r from-blue-500 to-blue-800 text-center"
         >
           Create an account
