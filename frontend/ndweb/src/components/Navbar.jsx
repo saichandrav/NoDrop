@@ -62,7 +62,7 @@ const Navbar = () => {
   const renderAuthActions = (isMobile = false) => (
     <div className={isMobile ? 'flex flex-col gap-3 mt-6' : 'flex items-center space-x-10 '}>
       <Link
-        to="/Signin"
+        to="/signin"
         className={
           isMobile
             ? 'py-3 px-4 border rounded-md hover:bg-white text-center'
